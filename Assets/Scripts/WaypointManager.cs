@@ -9,7 +9,6 @@ public class WaypointManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		SceneManager.CheckWaypoints += CheckWaypoint;
 
 	}
 	
@@ -18,16 +17,6 @@ public class WaypointManager : MonoBehaviour {
 		
 	}
 
-	public void CheckWaypoint() {
-		foreach (WayPoint w in waypoints) {
-			w.Disable ();
-			foreach (WayPoint neighbor in w.neighbors) {
-				if (w.isPlayerAtThisWaypoint) {
-					neighbor.Activate ();
-				}
-			} 
-		}
-	}
 
 	public void DisableAllWaypoints() {
 		foreach (WayPoint w in waypoints) {

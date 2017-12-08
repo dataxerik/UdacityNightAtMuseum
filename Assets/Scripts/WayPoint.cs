@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WayPoint : MonoBehaviour {
-	public bool isPlayerAtThisWaypoint;
+	public bool isPlayerAtThisWaypoint = false;
 	Collider waypointCollider;
 	MeshRenderer waypointRenderer;
 
-	public static event System.Action<Vector3> MovePlayer;
+	public static event System.Action<WayPoint> MovePlayer;
 
 	public Material materialActive;
 	public Material materialInactive;
@@ -27,9 +27,8 @@ public class WayPoint : MonoBehaviour {
 
 	public void OnClick(){
 		if (MovePlayer != null) {
-			MovePlayer(this.transform.position);
-			Disable ();
 			isPlayerAtThisWaypoint = true;
+			MovePlayer(this);
 		}
 	}
 
@@ -42,11 +41,14 @@ public class WayPoint : MonoBehaviour {
 	}
 
 	public void Disable() {
+		print ("before disable update " + waypointCollider.enabled);
 		ChangeToInactiveMaterial ();
 		SetColliderState (false);
+		print ("after disable update " + waypointCollider.enabled);
 	}
 
 	public void Activate() {
+		print ("activate is being called....");
 		ChangeToActiveMaterial ();
 		SetColliderState (true);
 	}
