@@ -13,12 +13,13 @@ public class SceneManager : MonoBehaviour {
 	void Start () {
 		WayPoint.MovePlayer += MovePlayerToWaypoint;
 		//MovePlayerToWaypoint (WaypointManager.GetPlayerStartingPosition());
+
 		MovePlayerToWaypoint(playerStartingWaypoint);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//MovePlayerToWaypoint(playerStartingWaypoint);
 	}
 
 	public void MovePlayerToWaypoint(WayPoint waypoint){
@@ -34,6 +35,7 @@ public class SceneManager : MonoBehaviour {
 
 	public void CheckWaypoints() {
 		foreach (WayPoint w in waypoints) {
+			print (w);
 			w.Disable ();
 			foreach (WayPoint neighbor in w.neighbors) {
 				if (neighbor.Equals(playerCurrentWaypoint)) {

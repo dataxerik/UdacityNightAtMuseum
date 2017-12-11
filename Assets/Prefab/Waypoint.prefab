@@ -40,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 1074616932364278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.04, y: 0, z: -0.11}
-  m_LocalScale: {x: 0.2734974, y: 0.27349746, z: 0.27349746}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0467f38092cfd1c428d80a18e8fbf676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerAtThisWaypoint: 0
   materialActive: {fileID: 2100000, guid: 813660916e45d1d4182c87ddbad27a1e, type: 2}
   materialInactive: {fileID: 2100000, guid: 5e9e13b00007a5a49879667e4db6f674, type: 2}
   materialHover: {fileID: 2100000, guid: d1b89b28a1c85ab42b67a86e369fb471, type: 2}

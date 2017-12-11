@@ -41,14 +41,11 @@ public class WayPoint : MonoBehaviour {
 	}
 
 	public void Disable() {
-		print ("before disable update " + waypointCollider.enabled);
 		ChangeToInactiveMaterial ();
 		SetColliderState (false);
-		print ("after disable update " + waypointCollider.enabled);
 	}
 
 	public void Activate() {
-		print ("activate is being called....");
 		ChangeToActiveMaterial ();
 		SetColliderState (true);
 	}
@@ -56,6 +53,9 @@ public class WayPoint : MonoBehaviour {
 	// Methods about changing waypoint material
 
 	void ChangeMaterial(Material material) {
+		if (waypointRenderer == null) {
+			waypointRenderer = GetComponent<MeshRenderer> ();
+		}
 		waypointRenderer.material = material;
 	}
 
@@ -72,6 +72,11 @@ public class WayPoint : MonoBehaviour {
 	}
 
 	void SetColliderState(bool state){
+		if (waypointCollider == null) {
+			waypointCollider = GetComponent<Collider> ();
+		}		
 		waypointCollider.enabled = state;
 	}
+
+
 }
