@@ -7,23 +7,18 @@ public class SceneManager : MonoBehaviour {
 	Player player;
 	public WayPoint playerStartingWaypoint;
 	WayPoint playerCurrentWaypoint;
-	public WayPoint[] waypoints;
+	WayPoint[] waypoints;
 
-	/*
-	void Awake() {
-		GameObject.DontDestroyOnLoad(this);
-		if (FindObjectsOfType (GetType ()).Length > 1) {
-			Destroy (gameObject);
-		}
-	}
-	*/
 	// Use this for initialization
 	void Start () {
 		Input.backButtonLeavesApp = true;
 		player = Player.Instance;
 		WayPoint.MovePlayer += MovePlayerToWaypoint;
+
+		//waypoints = GameObject.FindObjectsOfType<WayPoint> ();
 		//MovePlayerToWaypoint (WaypointManager.GetPlayerStartingPosition());
 		MovePlayerToWaypoint(playerStartingWaypoint);
+		CheckWaypoints (Waypoints.GetWaypoints);
 	}
 		
 	
@@ -36,30 +31,30 @@ public class SceneManager : MonoBehaviour {
 	}
 
 	public void MovePlayerToWaypoint(WayPoint waypoint){
-		print ("in move player");
-		print (player);
-		print (Player.Instance);
-		print (waypoint);
 		Player.Instance.transform.position = waypoint.transform.position;
 		playerCurrentWaypoint = waypoint;
-		CheckWaypoints ();
+		CheckWaypoints (Waypoints.GetWaypoints);
 		
 	}
 
 	public void MovePlayerToStart(Vector3 pos) {
+		Vector3 newPos = new Vector3 (pos.x, Vector3.forward.y, pos.z);
 		player.transform.position = pos;
+		player.transform.rotation = Quaternion.LookRotation (pos.y - Vector3.forward);
+		//player.transform.LookAt(Vector3.zero);
 	}
 
-	public void CheckWaypoints() {
-		foreach (WayPoint w in waypoints) {
+	public void CheckWaypoints(WayPoint[] waypointSystem) {
+		foreach (WayPoint w in waypointSystem) {
 			print (w);
 			w.Disable ();
 			foreach (WayPoint neighbor in w.neighbors) {
 				if (neighbor.Equals(playerCurrentWaypoint)) {
-					print ("has active neighbor " + neighbor);
 					w.Activate ();
 				}
 			} 
 		}
 	}
+
+
 }

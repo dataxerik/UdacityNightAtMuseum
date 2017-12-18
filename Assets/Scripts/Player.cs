@@ -18,6 +18,7 @@ public class Player : MonoBehaviour {
 	}
 
 	private void Awake() {
+		print ("in Player awake");
 		if (instance == null) {
 			instance = this;
 		}
