@@ -4,26 +4,43 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour {
 
-	public GameObject player;
+	Player player;
 	public WayPoint playerStartingWaypoint;
 	WayPoint playerCurrentWaypoint;
 	public WayPoint[] waypoints;
 
+	/*
+	void Awake() {
+		GameObject.DontDestroyOnLoad(this);
+		if (FindObjectsOfType (GetType ()).Length > 1) {
+			Destroy (gameObject);
+		}
+	}
+	*/
 	// Use this for initialization
 	void Start () {
+		Input.backButtonLeavesApp = true;
+		player = Player.Instance;
 		WayPoint.MovePlayer += MovePlayerToWaypoint;
 		//MovePlayerToWaypoint (WaypointManager.GetPlayerStartingPosition());
-
 		MovePlayerToWaypoint(playerStartingWaypoint);
 	}
+		
 	
 	// Update is called once per frame
 	void Update () {
-		//MovePlayerToWaypoint(playerStartingWaypoint);
+		//MovePlayerToWaypoint(playerStartingWaypoint)
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			Application.Quit();
+		}
 	}
 
 	public void MovePlayerToWaypoint(WayPoint waypoint){
-		player.transform.position = waypoint.transform.position;
+		print ("in move player");
+		print (player);
+		print (Player.Instance);
+		print (waypoint);
+		Player.Instance.transform.position = waypoint.transform.position;
 		playerCurrentWaypoint = waypoint;
 		CheckWaypoints ();
 		
