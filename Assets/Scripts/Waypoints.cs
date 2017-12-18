@@ -21,4 +21,9 @@ public class Waypoints : MonoBehaviour {
 	private void Awake() {
 		waypoints = GameObject.FindObjectsOfType<WayPoint> ();
 	}
+
+	public static WayPoint GetWayPointByIndex(int index){
+		return GetWaypoints[index];
+	}
+
 }

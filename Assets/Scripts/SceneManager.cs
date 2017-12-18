@@ -11,13 +11,20 @@ public class SceneManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		print ("in SceneManager start method.......");
 		Input.backButtonLeavesApp = true;
 		player = Player.Instance;
 		WayPoint.MovePlayer += MovePlayerToWaypoint;
 
-		//waypoints = GameObject.FindObjectsOfType<WayPoint> ();
-		//MovePlayerToWaypoint (WaypointManager.GetPlayerStartingPosition());
-		MovePlayerToWaypoint(playerStartingWaypoint);
+		Player.Instance.transform.eulerAngles = playerStartingWaypoint.transform.eulerAngles;
+		print (Player.Instance.PlayerLastScenePositionIndex);
+		//print(Waypoints.GetWayPointByIndex(Player.Instance.playerLastScenePosition));
+		if (Player.PlayerLastScenePositionIndex == -1) {
+			MovePlayerToStart (playerStartingWaypoint);
+		} else {
+			MovePlayerToStart (Waypoints.GetWayPointByIndex(Player.PlayerLastScenePositionIndex));
+		}
+		//MovePlayerToWaypoint(playerStartingWaypoint);
 		CheckWaypoints (Waypoints.GetWaypoints);
 	}
 		
@@ -28,33 +35,32 @@ public class SceneManager : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			Application.Quit();
 		}
+		//print (Player.Instance.GetComponentInChildren<Camera> ().transform.eulerAngles);
 	}
 
 	public void MovePlayerToWaypoint(WayPoint waypoint){
 		Player.Instance.transform.position = waypoint.transform.position;
-		playerCurrentWaypoint = waypoint;
+		Player.Instance.playerCurrent = waypoint;
 		CheckWaypoints (Waypoints.GetWaypoints);
 		
 	}
 
-	public void MovePlayerToStart(Vector3 pos) {
-		Vector3 newPos = new Vector3 (pos.x, Vector3.forward.y, pos.z);
-		player.transform.position = pos;
-		player.transform.rotation = Quaternion.LookRotation (pos.y - Vector3.forward);
-		//player.transform.LookAt(Vector3.zero);
+	public void MovePlayerToStart(WayPoint waypoint) {
+		Player.Instance.transform.position = waypoint.transform.position;
+		Player.Instance.transform.eulerAngles = waypoint.transform.eulerAngles;
+		Player.Instance.playerCurrent = waypoint;
+		CheckWaypoints (Waypoints.GetWaypoints);
 	}
 
 	public void CheckWaypoints(WayPoint[] waypointSystem) {
 		foreach (WayPoint w in waypointSystem) {
-			print (w);
 			w.Disable ();
 			foreach (WayPoint neighbor in w.neighbors) {
-				if (neighbor.Equals(playerCurrentWaypoint)) {
+				if (neighbor.Equals(Player.Instance.playerCurrent)) {
 					w.Activate ();
 				}
 			} 
 		}
 	}
-
 
 }

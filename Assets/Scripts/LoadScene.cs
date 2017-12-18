@@ -17,11 +17,12 @@ public class LoadScene : MonoBehaviour {
 
 	public void LoadNewScene() {
 		print ("entering new area");
+		Player.Instance.UpdateLastSceneWayPoint ();
 		UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName, LoadSceneMode.Single);	
 	}
 
 	void OnEnable(){
-		UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnFinishedLoading;
+		//UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnFinishedLoading;
 	}
 
 	void OnFinishedLoading(Scene scene, LoadSceneMode mode) {
