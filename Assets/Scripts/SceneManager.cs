@@ -13,6 +13,7 @@ public class SceneManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		print ("in SceneManager start method.......");
+		print(GameObject.FindObjectsOfType<InfoSignButton> ()[0]);
 		Input.backButtonLeavesApp = true;
 		player = Player.Instance;
 		WayPoint.MovePlayer += MovePlayerToWaypoint;
