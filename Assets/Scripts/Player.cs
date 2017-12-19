@@ -5,15 +5,15 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 	private static Player instance;
 	public WayPoint playerCurrent;
-	int playerLastScenePosition = -1;
+	static int playerLastScenePosition = -1;
 
 	public static Player Instance {
 		get { return instance; }
 	}
 
-	public static int PlayerLastScenePositionIndex {
+	public static int PlayerLastScenePosition {
 		get { return playerLastScenePosition; }
-		set { playerLastScenePosition = value; }
+		//set { Player.playerLastScenePosition = value; }
 	}
 	// Use this for initialization
 	void Start () {
