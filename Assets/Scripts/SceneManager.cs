@@ -6,6 +6,7 @@ public class SceneManager : MonoBehaviour {
 
 	Player player;
 	public WayPoint playerStartingWaypoint;
+	public static bool isReturningToHub = false;
 	WayPoint playerCurrentWaypoint;
 	WayPoint[] waypoints;
 
@@ -17,12 +18,12 @@ public class SceneManager : MonoBehaviour {
 		WayPoint.MovePlayer += MovePlayerToWaypoint;
 
 		Player.Instance.transform.eulerAngles = playerStartingWaypoint.transform.eulerAngles;
-		print (Player.Instance.PlayerLastScenePositionIndex);
+		print (Player.PlayerLastScenePosition);
 		//print(Waypoints.GetWayPointByIndex(Player.Instance.playerLastScenePosition));
-		if (Player.PlayerLastScenePositionIndex == -1) {
+		if (!isReturningToHub) {
 			MovePlayerToStart (playerStartingWaypoint);
 		} else {
-			MovePlayerToStart (Waypoints.GetWayPointByIndex(Player.PlayerLastScenePositionIndex));
+			MovePlayerToStart (Waypoints.GetWayPointByIndex(Player.PlayerLastScenePosition));
 		}
 		//MovePlayerToWaypoint(playerStartingWaypoint);
 		CheckWaypoints (Waypoints.GetWaypoints);

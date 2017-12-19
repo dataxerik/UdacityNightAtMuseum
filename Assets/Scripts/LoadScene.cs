@@ -15,9 +15,14 @@ public class LoadScene : MonoBehaviour {
 		
 	}
 
-	public void LoadNewScene() {
-		print ("entering new area");
+	public void LoadAttraction() {
 		Player.Instance.UpdateLastSceneWayPoint ();
+		UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName, LoadSceneMode.Single);
+	}
+
+	public void LoadHub() {
+		print ("entering hub");
+		SceneManager.isReturningToHub = true;
 		UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName, LoadSceneMode.Single);	
 	}
 
