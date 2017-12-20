@@ -7,13 +7,14 @@ public class SceneManager : MonoBehaviour {
 	Player player;
 	public WayPoint playerStartingWaypoint;
 	public static bool isReturningToHub = false;
+	public static event System.Action CheckInfoSigns;
 	WayPoint playerCurrentWaypoint;
 	WayPoint[] waypoints;
 
 	// Use this for initialization
 	void Start () {
 		print ("in SceneManager start method.......");
-		print(GameObject.FindObjectsOfType<InfoSignButton> ()[0]);
+
 		Input.backButtonLeavesApp = true;
 		player = Player.Instance;
 		WayPoint.MovePlayer += MovePlayerToWaypoint;
@@ -25,6 +26,7 @@ public class SceneManager : MonoBehaviour {
 			MovePlayerToStart (playerStartingWaypoint);
 		} else {
 			MovePlayerToStart (Waypoints.GetWayPointByIndex(Player.PlayerLastScenePosition));
+			isReturningToHub = false;
 		}
 		//MovePlayerToWaypoint(playerStartingWaypoint);
 		CheckWaypoints (Waypoints.GetWaypoints);
@@ -44,6 +46,12 @@ public class SceneManager : MonoBehaviour {
 		Player.Instance.transform.position = waypoint.transform.position;
 		Player.Instance.playerCurrent = waypoint;
 		CheckWaypoints (Waypoints.GetWaypoints);
+
+		if (CheckInfoSigns != null) {
+			CheckInfoSigns ();
+		} else {
+			print ("CheckInfoSigns is not assigned to a function");
+		}
 		
 	}
 

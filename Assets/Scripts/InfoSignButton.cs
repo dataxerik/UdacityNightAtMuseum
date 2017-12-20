@@ -13,14 +13,26 @@ public class InfoSignButton : MonoBehaviour {
 	MeshRenderer infoSignRenderer;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
+		
 		infoButton = GetComponent<Button> ();
 		infoSignRenderer = sign.GetComponent<MeshRenderer> ();
+		print ("........in InfoSignButton awake method ... " + sign.GetComponent<MeshRenderer> ());
+		print ("............ sign is currently set to.......... " + sign);
+
+	}
+
+	void OnEnable() {
+		/*
+		infoButton = GetComponent<Button> ();
+		infoSignRenderer = sign.GetComponent<MeshRenderer> ();
+		print ("in InfoSignButton start method ... " + sign.GetComponent<MeshRenderer> ());
+		*/
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//print (this + " " + sign);
 	}
 
 	public void OnClick() {
@@ -33,15 +45,23 @@ public class InfoSignButton : MonoBehaviour {
 
 	public void DisableButton() {
 		ChangeMaterial (signDisabled);
-		infoButton.interactable = false;
+		infoButton.enabled = false;
 	}
 
 	public void EnableButton() {
 		ChangeMaterial (signEnabled);
-		infoButton.interactable = true;
+		infoButton.enabled = true;
 	}
 
 	void ChangeMaterial(Material material) {
+		if (infoSignRenderer == null) {
+			print ("Trying to change the material of " + sign);
+			print ("Materials are " + signEnabled + " " + signDisabled);
+			print (" this is " + this);
+			print (" this is " + this.sign);
+			//infoSignRenderer = sign.GetComponent<MeshRenderer> ();
+		}
+		print ("render is set to " + infoSignRenderer);
 		infoSignRenderer.material = material;
 	}
 }
