@@ -8,13 +8,14 @@ public class InfoSignButton : MonoBehaviour {
 	public GameObject sign;
 	public Material signEnabled;
 	public Material signDisabled;
+	public static event System.Action DisplayMyInfo;
 	Button infoButton;
-	MeshRenderer infoButtonRenderer;
+	MeshRenderer infoSignRenderer;
 
 	// Use this for initialization
 	void Start () {
 		infoButton = GetComponent<Button> ();
-		infoButtonRenderer = GetComponent<MeshRenderer> ();
+		infoSignRenderer = sign.GetComponent<MeshRenderer> ();
 	}
 	
 	// Update is called once per frame
@@ -22,22 +23,25 @@ public class InfoSignButton : MonoBehaviour {
 		
 	}
 
-	public void DisplayInfo() {
-		print("clicked.......");
-		DisableButton ();
-
-
+	public void OnClick() {
+		if (DisplayMyInfo != null) {
+			DisplayMyInfo ();
+		} else {
+			print ("couldn't assign a function to the delegate......");
+		}
 	}
 
-	void DisableButton() {
-		ChangeMaterial (DisableButton);
+	public void DisableButton() {
+		ChangeMaterial (signDisabled);
+		infoButton.interactable = false;
 	}
 
-	void EnableButton() {
-		ChangeMaterial (EnableButton);
+	public void EnableButton() {
+		ChangeMaterial (signEnabled);
+		infoButton.interactable = true;
 	}
 
 	void ChangeMaterial(Material material) {
-		infoButtonRenderer.material = material;
+		infoSignRenderer.material = material;
 	}
 }
