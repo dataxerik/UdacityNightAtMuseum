@@ -15,16 +15,13 @@ public class InfoSign : MonoBehaviour {
 		myInfoDisplay = GetComponentInChildren<InfoDisplay> ();
 		Close ();
 		DisableSignAndInfo ();
-		print ("My signbutton is " + mySignButton);
-		print ("My signbutton sign is " + mySignButton.sign);
-		print ("My signbutton sign renderer is " + mySignButton.sign.GetComponent<MeshRenderer>());
+		print ("My signbutton is " + mySignButton.GetInstanceID());
+		print ("My signbutton sign is " + mySignButton.sign.GetInstanceID());
+		print ("My signbutton sign renderer is " + mySignButton.sign.GetComponent<MeshRenderer>().GetInstanceID());
 	}
 	
 	// Update is called once per frame
 	void Update () {	
-		print ("My signbutton is " + mySignButton);
-		print ("My signbutton sign is " + mySignButton.sign);
-		print ("My signbutton sign renderer is " + mySignButton.sign.GetComponent<MeshRenderer>());	
 	}
 
 	private void Awake() {
@@ -58,6 +55,11 @@ public class InfoSign : MonoBehaviour {
 
 		InfoDisplay.CloseInfoBox += Close;
 		print ("added behavor to CloseInfoeBox");
+	}
+
+	void OnDisable() {
+		InfoSignButton.DisplayMyInfo -= Display;
+		InfoDisplay.CloseInfoBox -= Close;
 	}
 
 	public void DisableSignAndInfo() {

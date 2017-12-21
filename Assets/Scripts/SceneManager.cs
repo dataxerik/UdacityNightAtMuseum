@@ -57,7 +57,7 @@ public class SceneManager : MonoBehaviour {
 
 	public void MovePlayerToStart(WayPoint waypoint) {
 		Player.Instance.transform.position = waypoint.transform.position;
-		Player.Instance.transform.eulerAngles = waypoint.transform.eulerAngles;
+		//Player.Instance.transform.eulerAngles = waypoint.transform.eulerAngles;
 		Player.Instance.playerCurrent = waypoint;
 		CheckWaypoints (Waypoints.GetWaypoints);
 	}

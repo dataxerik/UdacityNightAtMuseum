@@ -55,7 +55,7 @@ public class InfoSignButton : MonoBehaviour {
 
 	void ChangeMaterial(Material material) {
 		if (infoSignRenderer == null) {
-			print ("Trying to change the material of " + sign);
+			print ("Trying to change the material of " + sign.GetInstanceID());
 			print ("Materials are " + signEnabled + " " + signDisabled);
 			print (" this is " + this);
 			print (" this is " + this.sign);

@@ -12,11 +12,35 @@ EditorBuildSettings:
     path: Assets/Arcade.unity
     guid: 71ee6eb5dabd19c41a93f2cf4fe5a6f5
   - enabled: 0
-    path: Assets/Arcade 1.unity
+    path: Assets/BackupScenes/Arcade 1.unity
     guid: 4b4b55823f6510f4da4ad3ad528cfd5c
   - enabled: 1
     path: Assets/Draft1.unity
     guid: de2a446335846e44a9677beea6e67dde
-  - enabled: 1
-    path: Assets/Draft2.unity
+  - enabled: 0
+    path: Assets/BackupScenes/Draft2.unity
     guid: 315a428fd6c46b64d9054d70cbe55bd8
+  - enabled: 1
+    path: Assets/Classroom.unity
+    guid: 7ee8ff7f8ddfd4e4a9937e98fed046e1
+  - enabled: 1
+    path: Assets/Medicine.unity
+    guid: 717ea1b0d10ba41469cb8e5eeaea9684
+  - enabled: 1
+    path: Assets/Space.unity
+    guid: 78018acf8edd30949ba147e009969c53
+  - enabled: 1
+    path: Assets/Threapy.unity
+    guid: 5be741fda05b09e49ab7e86eae1270b8
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/208939b359f14a74ba27f1da0fa5a3c1
+    guid: 208939b359f14a74ba27f1da0fa5a3c1
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/de11fdf50b0e3694a854e2fb972a1510
+    guid: de11fdf50b0e3694a854e2fb972a1510
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/4ac9a000b1ac2f64f8a70adb6d67fe00
+    guid: 4ac9a000b1ac2f64f8a70adb6d67fe00
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/5059452be0645e94c8d3a98e7cfa6dfb
+    guid: 5059452be0645e94c8d3a98e7cfa6dfb
