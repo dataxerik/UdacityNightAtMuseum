@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/GoogleVR/Demos/Scenes/VideoDemo.unity
     guid: c79d901ffb34f428eadaa3a7269a6c7c
   - enabled: 1
+    path: Assets/Medicine.unity
+    guid: 717ea1b0d10ba41469cb8e5eeaea9684
+  - enabled: 1
     path: Assets/Arcade.unity
     guid: 71ee6eb5dabd19c41a93f2cf4fe5a6f5
   - enabled: 0
@@ -24,23 +27,20 @@ EditorBuildSettings:
     path: Assets/Classroom.unity
     guid: 7ee8ff7f8ddfd4e4a9937e98fed046e1
   - enabled: 1
-    path: Assets/Medicine.unity
-    guid: 717ea1b0d10ba41469cb8e5eeaea9684
-  - enabled: 1
     path: Assets/Space.unity
     guid: 78018acf8edd30949ba147e009969c53
   - enabled: 1
     path: Assets/Threapy.unity
     guid: 5be741fda05b09e49ab7e86eae1270b8
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/208939b359f14a74ba27f1da0fa5a3c1
+    path: 
     guid: 208939b359f14a74ba27f1da0fa5a3c1
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/de11fdf50b0e3694a854e2fb972a1510
+    path: 
     guid: de11fdf50b0e3694a854e2fb972a1510
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/4ac9a000b1ac2f64f8a70adb6d67fe00
+    path: 
     guid: 4ac9a000b1ac2f64f8a70adb6d67fe00
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/5059452be0645e94c8d3a98e7cfa6dfb
+    path: 
     guid: 5059452be0645e94c8d3a98e7cfa6dfb
