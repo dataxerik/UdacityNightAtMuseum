@@ -24,12 +24,23 @@ public class SceneManager : MonoBehaviour {
 		//print(Waypoints.GetWayPointByIndex(Player.Instance.playerLastScenePosition));
 		if (!isReturningToHub) {
 			MovePlayerToStart (playerStartingWaypoint);
+			GvrCardboardHelpers.Recenter();
 		} else {
 			MovePlayerToStart (Waypoints.GetWayPointByIndex(Player.PlayerLastScenePosition));
+			print (Quaternion.LookRotation (gameObject.transform.position));
+			GvrCardboardHelpers.Recenter();
+			print(".....................................................looking at this object now.......................");
+			print (Quaternion.LookRotation (Player.Instance.transform.position - GameObject.FindGameObjectWithTag("MiddleWaypoint").transform.position).eulerAngles);
+
+			print (Quaternion.LookRotation (Player.Instance.transform.position - Waypoints.GetWayPointByIndex(Player.PlayerLastScenePosition).transform.position).eulerAngles);
+			Player.Instance.transform.rotation = Quaternion.LookRotation (Player.Instance.transform.position - GameObject.FindGameObjectWithTag ("MiddleWaypoint").transform.position); //.eulerAngles.y;
 			isReturningToHub = false;
 		}
+		Vector3 vectorToMiddle = Player.Instance.transform.position + gameObject.transform.position;
+		print ("Vector to Middle is " + vectorToMiddle);
+		print ("Angle is " + Mathf.Acos (vectorToMiddle.x / vectorToMiddle.z) * Mathf.Rad2Deg);
 		//MovePlayerToWaypoint(playerStartingWaypoint);
-		CheckWaypoints (Waypoints.GetWaypoints);
+		//CheckWaypoints (Waypoints.GetWaypoints);
 	}
 		
 	
@@ -40,6 +51,7 @@ public class SceneManager : MonoBehaviour {
 			Application.Quit();
 		}
 		//print (Player.Instance.GetComponentInChildren<Camera> ().transform.eulerAngles);
+		//print ("Player rotation is " + Player.Instance.transform.rotation);
 	}
 
 	public void MovePlayerToWaypoint(WayPoint waypoint){
@@ -52,13 +64,26 @@ public class SceneManager : MonoBehaviour {
 		} else {
 			print ("CheckInfoSigns is not assigned to a function");
 		}
+		 
 		
 	}
 
 	public void MovePlayerToStart(WayPoint waypoint) {
 		Player.Instance.transform.position = waypoint.transform.position;
-		//Player.Instance.transform.eulerAngles = waypoint.transform.eulerAngles;
+		print ("waypoing position is " + waypoint.transform.position);
+		print ("Player rotation is " + Player.Instance.transform.rotation);
+		print ("Waypoint rotation is " + waypoint.transform.rotation);
+		print ("Camera rotation is " + Player.Instance.GetComponentInChildren<Camera> ().transform.eulerAngles.y);
+
+		//Player.Instance.transform.eulerAngles = new Vector3(0, 90, 0);
+		//GvrCardboardHelpers.Recenter();
+		print ("Player rotation is " + Player.Instance.transform.rotation);
 		Player.Instance.playerCurrent = waypoint;
+		if (CheckInfoSigns != null) {
+			CheckInfoSigns ();
+		} else {
+			print ("CheckInfoSigns is not assigned to a function");
+		}
 		CheckWaypoints (Waypoints.GetWaypoints);
 	}
 

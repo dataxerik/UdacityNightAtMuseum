@@ -35,6 +35,7 @@ public class InfoSignManager : MonoBehaviour {
 	void CalculateDistance() {
 		print ("checking info signs....");
 		foreach(InfoSign sign in infosigns) {
+			print ("distance is " + Vector3.Distance (Player.Instance.transform.position, sign.transform.position));
 			if (Vector3.Distance (Player.Instance.transform.position, sign.transform.position) <= enableDistance) {
 				sign.EnableSignAndInfo ();
 			} else {

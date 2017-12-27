@@ -39,6 +39,7 @@ public class Player : MonoBehaviour {
 		}
 		else if (instance !=this)
 		{
+			print (".........deleting this thing.......");
 			Destroy(gameObject);
 			return;
 		}
