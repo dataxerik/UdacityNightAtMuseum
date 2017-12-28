@@ -33,7 +33,6 @@ public class InfoSign : MonoBehaviour {
 	}
 
 	void Display() {
-		//mySignButton.D
 		print("Displayed!");
 		mySignButton.DisableButton ();
 		myInfoDisplay.ShowInfo ();
@@ -46,10 +45,6 @@ public class InfoSign : MonoBehaviour {
 	}
 
 	void OnEnable() {
-		/*
-		mySign = GetComponentInChildren<InfoSign> ();
-		mySignButton = GetComponentInChildren<InfoSignButton> ();
-		myInfoDisplay = GetComponentInChildren<InfoDisplay> ();*/
 		InfoSignButton.DisplayMyInfo += Display;
 		print ("added behavior to myDisplayInfo");
 
