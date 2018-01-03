@@ -1324,22 +1324,22 @@ Prefab:
     - target: {fileID: 224276086447360736, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0010259
+      value: -0.00069046
       objectReference: {fileID: 0}
     - target: {fileID: 224276086447360736, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.059921
+      value: 0.058708
       objectReference: {fileID: 0}
     - target: {fileID: 224276086447360736, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 501.2
+      value: 323.47
       objectReference: {fileID: 0}
     - target: {fileID: 224276086447360736, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 84.931
+      value: 275.19
       objectReference: {fileID: 0}
     - target: {fileID: 224211634978647520, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
@@ -1369,7 +1369,7 @@ Prefab:
     - target: {fileID: 114618042927465152, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 25
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 114618042927465152, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
@@ -1409,32 +1409,32 @@ Prefab:
     - target: {fileID: 224159646090430274, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.060948472
+      value: -0.08470446
       objectReference: {fileID: 0}
     - target: {fileID: 224159646090430274, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.72931343
+      value: 0.7020151
       objectReference: {fileID: 0}
     - target: {fileID: 224159646090430274, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.06553214
+      value: 0.08470446
       objectReference: {fileID: 0}
     - target: {fileID: 224159646090430274, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.67830133
+      value: 0.7020151
       objectReference: {fileID: 0}
     - target: {fileID: 224159646090430274, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -10.269
+      value: -13.76
       objectReference: {fileID: 0}
     - target: {fileID: 224159646090430274, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 94.151
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 224159646090430274, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
@@ -1479,7 +1479,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4418815578700206, guid: c67abb6032b042246bfb02859d19c4c1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -12.02
+      value: -11.17
       objectReference: {fileID: 0}
     - target: {fileID: 4418815578700206, guid: c67abb6032b042246bfb02859d19c4c1, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2819,32 +2819,32 @@ Prefab:
     - target: {fileID: 224276086447360736, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.77449
+      value: 2.16
       objectReference: {fileID: 0}
     - target: {fileID: 224276086447360736, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00065804
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 224276086447360736, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 368.05
+      value: 239.13
       objectReference: {fileID: 0}
     - target: {fileID: 224276086447360736, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 71.75
+      value: 233.4
       objectReference: {fileID: 0}
     - target: {fileID: 224276086447360736, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: -5.919e-12
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 114618042927465152, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 20
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 114618042927465152, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
@@ -2859,32 +2859,32 @@ Prefab:
     - target: {fileID: 224159646090430274, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.08470762
+      value: -0.08470446
       objectReference: {fileID: 0}
     - target: {fileID: 224159646090430274, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.70201474
+      value: 0.7020151
       objectReference: {fileID: 0}
     - target: {fileID: 224159646090430274, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.08470762
+      value: 0.08470446
       objectReference: {fileID: 0}
     - target: {fileID: 224159646090430274, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.70201474
+      value: 0.7020151
       objectReference: {fileID: 0}
     - target: {fileID: 224159646090430274, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -13.761001
+      value: -13.76
       objectReference: {fileID: 0}
     - target: {fileID: 224159646090430274, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90.00001
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 114379733682315008, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
