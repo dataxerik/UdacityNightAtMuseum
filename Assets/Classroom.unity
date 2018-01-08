@@ -1002,7 +1002,7 @@ Prefab:
     - target: {fileID: 114618042927465152, guid: 8258a7dd1d169374eb4cbef4aecced31,
         type: 2}
       propertyPath: m_Text
-      value: 'Let''s Practice Japanese!
+      value: 'Let''s Practice Japanese with VR!
 
         Click on a person''s head to talk to them'
       objectReference: {fileID: 0}
