@@ -29,7 +29,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4008166542138638
 Transform:
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1566349479483842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.73, z: 14.61}
+  m_LocalPosition: {x: -0.34, y: -3.59, z: -12.44}
   m_LocalScale: {x: 4.010871, y: 1.9346359, z: 0.35004944}
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f4c6afde3471342aecff5347e87b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Arcade
+  sceneName: Draft1
 --- !u!114 &114898874029563052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,7 +124,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114664664480509816}
-          m_MethodName: LoadAttraction
+          m_MethodName: LoadHub
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

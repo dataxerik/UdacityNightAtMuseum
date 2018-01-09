@@ -76,7 +76,7 @@ public class SceneManager : MonoBehaviour {
 		print ("Camera rotation is " + Player.Instance.GetComponentInChildren<Camera> ().transform.eulerAngles.y);
 
 		//Player.Instance.transform.eulerAngles = new Vector3(0, 90, 0);
-		//GvrCardboardHelpers.Recenter();
+		GvrCardboardHelpers.Recenter();
 		print ("Player rotation is " + Player.Instance.transform.rotation);
 		Player.Instance.playerCurrent = waypoint;
 		if (CheckInfoSigns != null) {
