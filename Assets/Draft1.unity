@@ -826,7 +826,7 @@ Prefab:
     - target: {fileID: 114716263384209796, guid: 3a4f8ad7791d8dc4cae27e945a499ae8,
         type: 2}
       propertyPath: m_Text
-      value: VR & Threapy
+      value: VR & Therapy
       objectReference: {fileID: 0}
     - target: {fileID: 4571460996798128, guid: 3a4f8ad7791d8dc4cae27e945a499ae8, type: 2}
       propertyPath: m_LocalScale.x
@@ -2070,7 +2070,7 @@ Prefab:
     - target: {fileID: 114664664480509816, guid: 557069a64d1946d4ba9f1b466afa76fd,
         type: 2}
       propertyPath: sceneName
-      value: Threapy
+      value: Therapy
       objectReference: {fileID: 0}
     - target: {fileID: 1566349479483842, guid: 557069a64d1946d4ba9f1b466afa76fd, type: 2}
       propertyPath: m_StaticEditorFlags
