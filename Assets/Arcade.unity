@@ -358,6 +358,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114664664480509816, guid: 557069a64d1946d4ba9f1b466afa76fd,
+        type: 2}
+      propertyPath: sceneName
+      value: Hub
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 557069a64d1946d4ba9f1b466afa76fd, type: 2}
   m_IsPrefabParent: 0
