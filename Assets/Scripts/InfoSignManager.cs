@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InfoSignManager : MonoBehaviour {
 
-	const double enableDistance = 3;
+	const double enableDistance = 3.2;
 
 	static InfoSign[] infosigns;
 
