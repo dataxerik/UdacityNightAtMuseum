@@ -1003,6 +1003,11 @@ Prefab:
       propertyPath: m_FontData.m_FontStyle
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114436798495276722, guid: d59a68ccdde45ec4da30c141ddb99b85,
+        type: 2}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d59a68ccdde45ec4da30c141ddb99b85, type: 2}
   m_IsPrefabParent: 0
@@ -1429,6 +1434,11 @@ Prefab:
         type: 2}
       propertyPath: m_FontData.m_FontStyle
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114436798495276722, guid: d59a68ccdde45ec4da30c141ddb99b85,
+        type: 2}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d59a68ccdde45ec4da30c141ddb99b85, type: 2}
