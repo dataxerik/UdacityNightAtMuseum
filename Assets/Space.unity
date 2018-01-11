@@ -933,6 +933,17 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 103.33
       objectReference: {fileID: 0}
+    - target: {fileID: 114618042927465152, guid: 8258a7dd1d169374eb4cbef4aecced31,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4eedafad5084240419e649245c7b2093,
+        type: 3}
+    - target: {fileID: 114618042927465152, guid: 8258a7dd1d169374eb4cbef4aecced31,
+        type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8258a7dd1d169374eb4cbef4aecced31, type: 2}
   m_IsPrefabParent: 0

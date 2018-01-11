@@ -5,6 +5,8 @@ This project titled ‘Night in the Museum’ is a part of the Udacity VR nano-d
 
 The main scene is 'Hub'.
 
+Link to the write up is here: https://medium.com/@dsshar/night-at-the-museum-by-derek-sharp-a92a156306a5
+
 # Versions
 Unity 2017.1.0p4
 GVR 1.70.0
